@@ -125,6 +125,14 @@ h3 {
     cursor: pointer;
 }
 
+.Icono-Carrito img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    margin-left: 440px;
+}
+
 
 .boton,
 button {
