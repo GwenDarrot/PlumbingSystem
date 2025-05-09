@@ -4,36 +4,58 @@ body {
     font-family: "Nunito", sans-serif;
     margin: 0;
     padding: 0;
-    background: rgb(94, 180, 249);
+    background: white;
     color: #222;
+}
+
+.fondo-azul {
+    background: rgb(94, 180, 249);
+    height: 120px;
+    width: 100%;
+    max-width: 440px;
+    margin: 40px auto 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.fondo-azul-Administrador {
+    background: rgb(94, 180, 249);
+    height: 120px;
+    width: 100%;
+    max-width: 640px;
+    margin: 40px auto 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
 .registro-container,
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 40px auto;
-    padding: 20px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     max-width: 400px;
     width: 90%;
+    margin: -60px auto 40px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
 }
+
 .cliente-container,
 .fontanero-container,
 .admin-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 40px auto;
+    margin: -60px auto 40px;
     padding: 20px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 90%;
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
@@ -44,27 +66,49 @@ header h1 {
     font-weight: 700;
 }
 
-h2, h3 {
+h2,
+h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: black;
     margin-bottom: 20px;
 }
 
-.login-ilustracion {
-    width: 100%;
-    max-height: 200px;
-    margin: 20px auto;
-    text-align: center;
-}
-
 .login-ilustracion img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    margin-bottom: 20px;
 }
 
-.boton, button {
+.nuevoPedido-ilustracion img,
+.misPedidos-ilustracion img,
+.solicitarServicios-ilustracion img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.pendienteValidacion-ilustracion img,
+.gestionPedidos-ilustracion img,
+.estadisticasReportes-ilustracion img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.listadoTareas-ilustracion img,
+.historialServicios-ilustracion img {
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.boton,
+button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,12 +116,13 @@ h2, h3 {
     color: white;
     font-family: "Nunito", sans-serif;
     font-size: 16px;
-    border: none;
+    border: 1px solid black;
     border-radius: 6px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 
@@ -99,15 +144,17 @@ label {
     margin-top: 20px;
     margin-bottom: 5px;
 }
-input, select {
+
+input,
+select {
     font-family: "Nunito", sans-serif;
     font-size: 16px;
     color: rgb(94, 180, 249);
     padding: 10px;
     margin-top: 5px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 1rem;
 }
 
 a {
@@ -196,4 +243,45 @@ a:hover {
     height: 100%;
     background-color: rgb(94, 180, 249);
     transition: width 0.3s ease;
+}
+
+/* TABLAS MODERNAS */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background-color: rgb(94, 180, 249);
+    color: #fff;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f2faff;
+    transition: background-color 0.3s ease;
 }
