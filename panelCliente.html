@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <h3>Acceso directo a paneles (solo para pruebas)</h3>
+        <ul>
+            <li><a href="index.html">Iniciar Sesión</a></li>
+            <li><a href="registro.html">Registrarse</a></li>
+            <li><a href="panelAdministrador.html">Panel Administrador</a></li>
+            <li><a href="panelFontanero.html">Panel Fontanero</a></li>
+        </ul>
+    <div class="cliente-container">
+        <h2>Nuevo Pedido</h2>
+        <form>
+            <label>Seleccionar producto:</label>
+            <select>
+                <option>Grifo</option>
+                <option>Tubería</option>
+                <option>Calentador</option>
+            </select>
+
+            <label>Cantidad:</label>
+            <input type="number" min="1" value="1" />
+
+            <label>Dirección de entrega:</label>
+            <input type="text"/>
+
+            <button type="submit">Continuar &#x2192;</button>
+        </form>
+
+        <h2>Mis Pedidos</h2>
+        <ul>
+            <li>Pedido #001 - Estado: Pendiente</li>
+            <li>Pedido #002 - Estado: En Progreso</li>
+        </ul>
+
+        <form class="solicitar-servicios">
+            
+            <h2>Solicitar Servicios</h2>
+            <label>Tipo de servicio:</label>
+            <select>
+                <option>Reparación de grifo</option>
+                <option>Instalación de calentador</option>
+                <option>Mantenimiento de tuberías</option>
+            </select>
+            <button type="submit">Enviar Solicitud &#x2192;</button>
+        </form>
+        </main>
+    </div>
+</body>
+
+</html>
