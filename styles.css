@@ -1,20 +1,39 @@
 body {
+    display: flex;
+    flex-direction: column;
     font-family: "Nunito", sans-serif;
     margin: 0;
     padding: 0;
     background: rgb(94, 180, 249);
-    color: rgb(94, 180, 249);
+    color: #222;
 }
 
-.container,
-.cliente-container,
 .registro-container,
-.fontanero-container {
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 40px auto;
     padding: 20px;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+.cliente-container,
+.fontanero-container,
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
 }
 
 header h1 {
@@ -25,33 +44,46 @@ header h1 {
     font-weight: 700;
 }
 
-h2 {
+h2, h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: black;
     margin-bottom: 20px;
 }
 
-.boton {
+.login-ilustracion {
+    width: 100%;
+    max-height: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.login-ilustracion img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.boton, button {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(94, 180, 249);
     color: white;
     font-family: "Nunito", sans-serif;
     font-size: 16px;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: none;
+    border-radius: 6px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 200px;
-    height: 40px;
-    margin: 10px;
-    text-align: center;
-    text-decoration: none;
+    margin-top: 10px;
     font-weight: 700;
+}
+
+.boton:hover,
+button:hover {
+    background-color: rgb(65, 145, 210);
 }
 
 form {
@@ -60,35 +92,22 @@ form {
 }
 
 label {
-    margin-top: 10px;
-    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: rgb(94, 180, 249);
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
-
-input {
+input, select {
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: rgb(94, 180, 249);
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color:rgb(94, 180, 249);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: rgb(94, 180, 249);
-}
-
-.acciones,
-.extra {
-    text-align: center;
-    margin-top: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
 a {
@@ -100,10 +119,18 @@ a:hover {
     text-decoration: underline;
 }
 
+.acciones,
+.extra {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
 .top-nav {
-    background-color:rgb(94, 180, 249);
+    background-color: rgb(94, 180, 249);
     padding: 10px;
     text-align: center;
+    width: 100%;
 }
 
 .top-nav a {
@@ -133,7 +160,7 @@ a:hover {
 .circle {
     --size: 100px;
     --stroke: 10;
-    --color:rgb(94, 180, 249);
+    --color: rgb(94, 180, 249);
     --bg: #e0e0e0;
     --percent: 70;
 
@@ -167,6 +194,6 @@ a:hover {
 
 .progress {
     height: 100%;
-    background-color:rgb(94, 180, 249);
+    background-color: rgb(94, 180, 249);
     transition: width 0.3s ease;
 }
